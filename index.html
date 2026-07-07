@@ -1058,7 +1058,7 @@ function buildYOY(){
   dc('yoyChannelQuarter');
   charts['yoyChannelQuarter']=new Chart(document.getElementById('yoy-channel-quarter-chart'),{type:'bar',data:{labels:chQL,datasets:[
     {label:'Q1 (1-3月)',data:chQ1,backgroundColor:chQ1.map(v=>v!=null?(v>=0?'rgba(52,211,153,.7)':'rgba(248,113,113,.7)'):null),borderRadius:4},
-    {label:'Q2 (4-6月)',data:chQ2,backgroundColor:chQ2.map(v=>v!=null?(v>=0?'rgba(79,142,247,.7)':'rgba(251,191,36,.7)'):null),borderRadius:4}
+    {label:'Q2 (4-6月)',data:chQ2,backgroundColor:chQ2.map(v=>v!=null?(v>=0?'rgba(52,211,153,.7)':'rgba(248,113,113,.7)'):null),borderRadius:4}
   ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{color:'#94a3b8'}},tooltip:{...tooltip,callbacks:{label:ctx=>ctx.dataset.label+': '+(ctx.raw!=null?(ctx.raw>=0?'+':'')+ctx.raw+'%':'無資料')}}},scales:{x:{grid:{display:false},ticks:{color:'#94a3b8'}},y:{grid:gridCfg,ticks:{callback:v=>v+'%',color:'#94a3b8'},title:{display:true,text:'YOY 變化率 (%)',color:'#94a3b8'}}}}});
 
   // 季度 YOY 對比圖
